@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { AppProviders } from './AppProviders';
+import { Router } from './routes/Router';
+import { Container } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const useStyles = makeStyles(() => ({
+	mainContainer: {
+		display: 'flex !important',
+		alignItems: 'center',
+		justifyContent: 'center',
+		minHeight: '100vh',
+	},
+}));
 
-export default App;
+export const App = () => {
+	const classes = useStyles();
+	return (
+		<AppProviders>
+			<Container className={classes.mainContainer}>
+				<Router />
+			</Container>
+		</AppProviders>
+	);
+};
