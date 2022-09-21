@@ -1,0 +1,15 @@
+{
+  "short_name": "Github Contributors",
+  "name": "Github Contributors",
+  "icons": [
+    {
+      "src": "github.ico",
+      "sizes": "128x128 64x64 32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
