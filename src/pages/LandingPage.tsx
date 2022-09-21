@@ -33,10 +33,13 @@ export const LandingPage = () => {
 
 	return (
 		<Box className={classes.mainContainer}>
-			<Link to={routes.contributors} className={classes.link}>
+			<Link
+				to={`${routes.base}${routes.contributors}`}
+				className={classes.link}
+			>
 				<Card className={classes.card}>GET REACT CONTRIBUTORS</Card>
 			</Link>
-			<Link to={routes.search} className={classes.link}>
+			<Link to={`${routes.base}${routes.search}`} className={classes.link}>
 				<Card className={classes.card}>SEARCH REPOSITORIES</Card>
 			</Link>
 		</Box>

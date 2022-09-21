@@ -13,13 +13,13 @@ import { getReactContributors } from './contributors.thunk';
 export function* handleLocationChange() {
 	const location: { pathname: string } = yield select(locationSelector);
 	const currentPage: number = yield select(pageNumberSelector);
-	if (location.pathname !== routes.contributors) return;
+	if (!location.pathname.includes(routes.contributors)) return;
 	yield put(getReactContributors(currentPage) as any);
 }
 
 export function* handleGoToMainPage() {
 	yield put(clearContributorsData());
-	yield put(pushLocation(routes.base));
+	yield put(pushLocation(routes.base!));
 }
 
 export function* contributorsSaga() {

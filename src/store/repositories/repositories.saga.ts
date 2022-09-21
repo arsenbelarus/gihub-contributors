@@ -22,7 +22,7 @@ export function* handleSearchRepositories() {
 }
 
 export function* handleGoBack() {
-	yield put(pushLocation(routes.base));
+	yield put(pushLocation(routes.base!));
 	yield put(clearRepositoriesData());
 }
 

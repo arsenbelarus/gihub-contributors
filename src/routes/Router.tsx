@@ -7,9 +7,17 @@ import { SearchRepositories } from '../pages/SearchRepositories';
 export const Router = () => {
 	return (
 		<Switch>
-			<Route path={routes.contributors} exact component={ReactContributors} />
-			<Route path={routes.search} exact component={SearchRepositories} />
-			<Route path={'/'} exact component={LandingPage} />
+			<Route
+				path={`${routes.base}${routes.contributors}`}
+				exact
+				component={ReactContributors}
+			/>
+			<Route
+				path={`${routes.base}${routes.search}`}
+				exact
+				component={SearchRepositories}
+			/>
+			<Route path={routes.base} exact component={LandingPage} />
 		</Switch>
 	);
 };

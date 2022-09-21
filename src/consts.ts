@@ -1,7 +1,7 @@
 export const routes = {
 	contributors: '/react-contributors',
 	search: '/search-repositories',
-	base: '/',
+	base: process.env.PUBLIC_URL,
 } as const;
 
 export enum ButtonsDirection {
