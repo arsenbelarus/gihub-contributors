@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+You can see the working version on https://arsenbelarus.github.io/github-contributors
+
 ## Available Scripts
 
 In the project directory, you can run:
