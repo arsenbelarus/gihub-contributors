@@ -1,7 +1,7 @@
 import { LOCATION_CHANGE, push as pushLocation } from 'connected-react-router';
 import { select, put, takeEvery } from 'redux-saga/effects';
 import { routes } from '../../consts';
-import { locationSelector } from '../router.selector';
+import { locationSelector } from '../root/router.selector';
 import { goToMainPage } from './contributors.actions';
 import {
 	changePageNumber,
