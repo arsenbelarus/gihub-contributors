@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { appConfig } from '../appConfig';
+import { BASE_URL, TOKEN } from '../appConfig';
 
 export const contributorsApi = axios.create({
-	baseURL: appConfig.BASE_URL,
-	headers: { Authorization: `Bearer ${appConfig.TOKEN}` },
+	baseURL: BASE_URL,
+	headers: { Authorization: `Bearer ${TOKEN}` },
 });
