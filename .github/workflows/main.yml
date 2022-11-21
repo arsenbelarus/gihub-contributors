@@ -18,11 +18,11 @@ jobs:
           npm install
           npm run-script build
         env:
-          gh-pages: ${{ secrets.REACT_APP_GITHUB_TOKEN }}
+          gh-pages: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          REACT_APP_GITHUB_TOKEN: ${{ secrets.REACT_APP_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           FOLDER: build
